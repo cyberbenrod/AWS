@@ -1,0 +1,11 @@
+import json
+def lambda_handler(event, context):
+ print('Function loaded successfully');
+ response = {
+ 'item1': ('Received ' + event['key1']),
+ 'item2': ('Received ' + event['key2']),
+ 'item3': ('Received ' + event['key3'])
+ }
+ print('Returning response: ')
+ print(response)
+ return response
